@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+               
+     <bean id="PolskaKraj" class="AppPack.Kraj">
+         <property name="nazwa" value="Polska"></property>
+         <property name="curr" value="pln"></property>
+         <property name="taxPercent" value="19"></property>
+         <property name="taxValue" value="1200"></property>
+     </bean>
+     <bean id="NiemcyKraj" class="AppPack.Kraj">
+         <property name="nazwa" value="Niemcy"></property>
+         <property name="curr" value="eur"></property>
+         <property name="taxPercent" value="20"></property>
+         <property name="taxValue" value="800"></property>
+     </bean>
+     <bean id="WielkaBrytaniaKraj" class="AppPack.Kraj">
+         <property name="nazwa" value="WielkaBrytania"></property>
+         <property name="curr" value="gbp"></property>
+         <property name="taxPercent" value="25"></property>
+         <property name="taxValue" value="600"></property>
+     </bean>
+</beans>

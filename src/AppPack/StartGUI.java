@@ -1,9 +1,6 @@
 package AppPack;
 
 import javax.swing.JOptionPane;
-import javax.swing.text.Document;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -143,7 +140,6 @@ public class StartGUI extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         int countryIndex = jComboBox1.getSelectedIndex();
 
-        StringBuilder txt = new StringBuilder();
         String currency = "";
         currency = countries.get(countryIndex).getCurr();
         double currEx;
@@ -229,7 +225,7 @@ return waluta;
     public double formula(Kraj kraj, int dailyWage,double exchange)
     {
         double pep = ((22*(dailyWage))-kraj.getTaxValue())*((100-kraj.getTaxPercent())/100);
-        return pep/exchange;
+        return pep*exchange;
     }
     
     /**
